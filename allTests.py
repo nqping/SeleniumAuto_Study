@@ -31,7 +31,7 @@ def getNowTime():
     return time.strftime('%Y-%m-%d %H-%M_', time.localtime(time.time()))
 
 def run():
-    fileName = os.path.join(os.path.join(os.path.abspath('..'),'report'),getNowTime()+'report.html')
+    fileName = os.path.join(os.path.join(os.path.dirname(__file__),'report'),getNowTime()+'report.html')
     fp = open(fileName,'wb')
     runner = HTMLTestReportCN.HTMLTestRunner(stream=fp,title='UI自动化测试报告',description='用例执行情况')
     runner.run(allTests())
