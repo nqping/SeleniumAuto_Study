@@ -5,22 +5,24 @@
 # @File : allTests.py 
 # @Desc : 批量执行测试用例
 
+from framework import HTMLTestReportCN
 import unittest
 import os
 import time
-from framework import HTMLTestReportCN
+import HTMLTestReportCN
+
 
 def allClass():
     '''获取所有测试模块'''
     suite = unittest.TestLoader().discover(
-        start_dir=os.path.dirname(__file__),
+        start_dir=os.path.join(os.path.dirname(__file__),'testCase'),
         pattern='test_*.py',top_level_dir=None) #获取模块
     return suite
 
 def allTests():
     # 获取所有测试用例
     suite = unittest.defaultTestLoader.discover(
-        start_dir=os.path.dirname(__file__),
+        start_dir=os.path.join(os.path.dirname(__file__),'testCase'),
         pattern='test_*.py', top_level_dir=None)
     return suite
 
