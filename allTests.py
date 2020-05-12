@@ -9,7 +9,6 @@ from framework import HTMLTestReportCN
 import unittest
 import os
 import time
-import HTMLTestReportCN
 
 
 def allClass():
