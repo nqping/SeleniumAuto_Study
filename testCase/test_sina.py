@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # @Time : 2020/5/9 14:59 
 # @Author : qingping.niu
-# @File : test_sina.py 
+# @File : test_sina.py
 # @Desc :
 
 import unittest
